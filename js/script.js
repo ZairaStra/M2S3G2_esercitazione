@@ -12,8 +12,7 @@ const fetchBooks = () => {
         const row = document.getElementById("cardsContainer");
 
         const col = document.createElement("div");
-        col.className = "col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 col-3xl-1";
-        col.classList.add("mb-2");
+        col.className = "col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2";
 
         const img = document.createElement("img");
         img.style.width = "100%";
@@ -29,6 +28,7 @@ const fetchBooks = () => {
 
         const btnGroup = document.createElement("div");
         btnGroup.classList.add("btn-group");
+        btnGroup.classList.add();
 
         const btnDelete = document.createElement("button");
         btnDelete.classList.add("btn");
