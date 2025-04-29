@@ -22,7 +22,7 @@ const fetchBooks = () => {
         title.innerText = book.title;
 
         const price = document.createElement("p");
-        price.innerText = book.price;
+        price.innerText = book.price + " €";
 
         const bd = document.createElement("div");
 
@@ -42,6 +42,16 @@ const fetchBooks = () => {
         btnSelect.classList.add("btn");
         btnSelect.classList.add("btn-outline-danger");
         btnSelect.innerText = "Acquista ora";
+
+        const ul = document.querySelector("ul");
+
+        btnSelect.onclick = function (e) {
+          e.preventDefault();
+
+          const li = document.createElement("li");
+          li.innerText = book.title;
+          ul.appendChild(li);
+        };
 
         btnGroup.appendChild(btnSelect);
         btnGroup.appendChild(btnDelete);
