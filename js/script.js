@@ -13,12 +13,13 @@ const fetchBooks = () => {
 
         const col = document.createElement("div");
         col.className = "col-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 col-3xl-1";
+        col.classList.add("mb-2");
 
         const img = document.createElement("img");
         img.style.width = "100%";
         img.src = book.img;
 
-        const title = document.createElement("h4");
+        const title = document.createElement("h5");
         title.innerText = book.title;
 
         const price = document.createElement("p");
