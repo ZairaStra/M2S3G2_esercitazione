@@ -2,8 +2,9 @@ const fetchBooks = () => {
   fetch("https://striveschool-api.herokuapp.com/books")
     .then((response) => {
       if (response.ok) {
-        return response.json();
+        throw new Error("Errore nella fetch");
       }
+      return response.json();
     })
     .then((books) => {
       console.log(books);
